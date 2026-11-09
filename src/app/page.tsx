@@ -20,6 +20,28 @@ const navItems = ["Home", "About", "Projects", "Education", "Hobbies", "Contact"
 const linkedinUrl = "https://www.linkedin.com/in/chaney-karechu-37a5922b9/";
 const contactEmail = "chaneykarechu@gmail.com";
 
+function Asterisk({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      viewBox="0 0 16 16"
+      style={{
+        width: "1em",
+        height: "1em",
+        display: "inline-block",
+        verticalAlign: "-0.12em",
+        flexShrink: 0,
+      }}
+    >
+      <path
+        fill="currentColor"
+        d="M8 0 9.05 2.7 9.03 5.51 11 3.51 13.66 2.34 12.49 5 10.49 6.97 13.3 6.95 16 8 13.3 9.05 10.49 9.03 12.49 11 13.66 13.66 11 12.49 9.03 10.49 9.05 13.3 8 16 6.95 13.3 6.97 10.49 5 12.49 2.34 13.66 3.51 11 5.51 9.03 2.7 9.05 0 8 2.7 6.95 5.51 6.97 3.51 5 2.34 2.34 5 3.51 6.97 5.51 6.95 2.7Z"
+      />
+    </svg>
+  );
+}
+
 // Project information and links
 const projects = [
   {
@@ -30,7 +52,7 @@ const projects = [
       "A lightweight API uptime monitoring and incident management tool for developers and teams to keep their applications running smoothly.",
     tags: ["Product design", "Full-stack"],
     tone: "lime",
-    mark: "✳",
+    mark: "asterisk",
     liveUrl: "https://pulsecheck-frontend-ekep.onrender.com",
     githubUrl: "https://github.com/Chaney-jpeg/pulsecheck",
   },
@@ -132,19 +154,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             HELLO, I’M CHANEY{" "}
-            <svg
-              aria-hidden="true"
-              className="eyebrow-star"
-              width="12"
-              height="12"
-              viewBox="0 0 16 16"
-              style={{ verticalAlign: "-2px" }}
-            >
-              <path
-                fill="currentColor"
-                d="M8 0.6 9.8 5.5 14.5 2.2 11.2 6.8 15.5 8 11.2 9.2 14.5 13.8 9.8 10.5 8 15.4 6.2 10.5 1.5 13.8 4.8 9.2 0.5 8 4.8 6.8 1.5 2.2 6.2 5.5Z"
-              />
-            </svg>
+            <Asterisk className="eyebrow-star" />
           </motion.p>
 
           <motion.h1
@@ -173,7 +183,10 @@ export default function Home() {
           </div>
 
           <p className="hero-index">
-            BASED IN NAIROBI, KENYA <span>✳</span>
+            BASED IN NAIROBI, KENYA{" "}
+            <span>
+              <Asterisk />
+            </span>
           </p>
         </div>
 
@@ -193,9 +206,13 @@ export default function Home() {
           <div className="initials-art">
             <span className="initial-c">C</span>
             <span className="initial-k">K</span>
-            <span className="sparkle s-one">✳</span>
+            <span className="sparkle s-one">
+              <Asterisk />
+            </span>
             <span className="sparkle s-two">✦</span>
-            <span className="sparkle s-three">✳</span>
+            <span className="sparkle s-three">
+              <Asterisk />
+            </span>
             <span className="circle-stamp">
               DESIGN
               <br />
@@ -312,7 +329,13 @@ export default function Home() {
                   ({project.number})
                 </span>
 
-                <span className="project-symbol">{project.mark}</span>
+                <span className="project-symbol">
+                  {project.mark === "asterisk" ? (
+                    <Asterisk />
+                  ) : (
+                    project.mark
+                  )}
+                </span>
 
                 <span className="project-art-label">
                   {project.name}
@@ -320,7 +343,9 @@ export default function Home() {
 
                 <span className="project-orbit orbit-one" />
                 <span className="project-orbit orbit-two" />
-                <span className="project-art-spark">✳</span>
+                <span className="project-art-spark">
+                  <Asterisk />
+                </span>
               </div>
 
               <div className="project-info">
@@ -477,7 +502,9 @@ export default function Home() {
       <section className="contact section-shell" id="contact">
         <div className="contact-top">
           <span className="section-number">05 / CONTACT</span>
-          <span className="contact-star">✳</span>
+          <span className="contact-star">
+            <Asterisk />
+          </span>
         </div>
 
         <h2>
@@ -511,7 +538,9 @@ export default function Home() {
         <div className="contact-footer">
           <span>NAIROBI, KENYA</span>
           <span>OPEN TO GOOD COLLABORATIONS</span>
-          <span>✳</span>
+          <span>
+            <Asterisk />
+          </span>
         </div>
       </section>
 
