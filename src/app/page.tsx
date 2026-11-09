@@ -299,23 +299,24 @@ export default function Home() {
           </div>
         </div>
 
+        <h3 className="principles-heading">How I approach engineering</h3>
         <div className="principles">
           <div>
             <span>01</span>
-            <strong>Curiosity first</strong>
-            <p>Ask better questions. Stay open to new ideas.</p>
+            <strong>Problem-driven thinking</strong>
+            <p>I focus on understanding real-world problems and finding practical ways technology can solve them</p>
           </div>
 
           <div>
             <span>02</span>
-            <strong>People matter</strong>
-            <p>Build for the people who will use it every day.</p>
+            <strong>Engineering with purpose</strong>
+            <p>I value clean architecture,thoughful implementation and building systems that are reliable,scalable and useful.</p>
           </div>
 
           <div>
             <span>03</span>
-            <strong>Details count</strong>
-            <p>Thoughtful choices add up to a better whole.</p>
+            <strong>Always evolving</strong>
+            <p>I believe good engineers never stop learning,experimenting and refining how they approach complex problems</p>
           </div>
         </div>
       </section>
