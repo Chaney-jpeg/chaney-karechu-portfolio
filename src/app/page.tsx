@@ -131,7 +131,20 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            HELLO, I’M CHANEY <span className="eyebrow-star">✳</span>
+            HELLO, I’M CHANEY{" "}
+            <svg
+              aria-hidden="true"
+              className="eyebrow-star"
+              width="12"
+              height="12"
+              viewBox="0 0 16 16"
+              style={{ verticalAlign: "-2px" }}
+            >
+              <path
+                fill="currentColor"
+                d="M8 0.6 9.8 5.5 14.5 2.2 11.2 6.8 15.5 8 11.2 9.2 14.5 13.8 9.8 10.5 8 15.4 6.2 10.5 1.5 13.8 4.8 9.2 0.5 8 4.8 6.8 1.5 2.2 6.2 5.5Z"
+              />
+            </svg>
           </motion.p>
 
           <motion.h1
