@@ -42,6 +42,30 @@ function Asterisk({ className }: { className?: string }) {
   );
 }
 
+function UpRightMark() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 100 100"
+      style={{
+        width: "1em",
+        height: "1em",
+        display: "inline-block",
+        flexShrink: 0,
+      }}
+    >
+      <path
+        d="M25 75 75 25M38 25h37v37"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+        strokeWidth="4"
+      />
+    </svg>
+  );
+}
+
 // Project information and links
 const projects = [
   {
@@ -65,7 +89,7 @@ const projects = [
       "A learning management experience shaped around the needs of students and educators in a digital classroom.",
     tags: ["Education", "Web app"],
     tone: "lavender",
-    mark: "↗",
+    mark: "arrow-up-right",
     liveUrl: "",
     githubUrl: "https://github.com/Chaney-jpeg/KCA-LMS",
   },
@@ -332,6 +356,8 @@ export default function Home() {
                 <span className="project-symbol">
                   {project.mark === "asterisk" ? (
                     <Asterisk />
+                  ) : project.mark === "arrow-up-right" ? (
+                    <UpRightMark />
                   ) : (
                     project.mark
                   )}
